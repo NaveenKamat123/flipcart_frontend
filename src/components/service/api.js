@@ -1,10 +1,10 @@
 import axios from 'axios'
-const URL='http://localhost:8000'
+
 
 export const authenticateSignup=async (data)=>{
     try{
        
-    return  await axios.post(`${URL}/signup`,data)
+    return  await axios.post(`${process.env.REACT_APP_BASE_URL}/signup`,data)
 
     }
 
@@ -17,7 +17,7 @@ export const authenticateSignup=async (data)=>{
 export const authenticatelogin=async (data)=>{
     try{
        
-    return  await axios.post(`${URL}/login`,data)
+    return  await axios.post(`${process.env.REACT_APP_BASE_URL}/login`,data)
 
     }
 
